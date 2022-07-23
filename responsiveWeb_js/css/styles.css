@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+/* font-family: 'Kirang Haerang', cursive; */
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    display: flex;
+height: 80px;
+align-items: center;
+top: 0;
+position: sticky;
+cursor: pointer;
+overflow: hidden;
+}
+.logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 42%;
+    border: 3px solid white;
+    border-radius: 34%;
+}
+.nav-list{
+    width: 50%;
+    /* background-color: yellow; */
+    display: flex;
+align-items: center;
+}
+.nav-list li{
+    list-style: none;
+    padding: 20px 27px;
+    font-weight: bolder;
+    font-size: 20px;
+    /* font-family: 'Kirang Haerang', cursive; */
+}
+.nav-list li a{
+    text-decoration: none;
+    color: white;
+}
+.nav-list li a:hover{
+    text-decoration: none;
+    font-size: 30px;
+}
+.rightNav{
+    /* height: 100%;
+width: 195%; */
+    /* background-color: blueviolet; */
+    text-align: right;
+    width: 206%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+#search
+{
+    border-radius: 13px;
+    padding: 7px 0px;
+    /* margin: 24px 0px; */
+    width: 282px;
+    color: black;
+    font-family: 'Kirang Haerang', cursive;
+    /* font-weight: bold; */
+    font-size: 17px;
+}
+.Background{
+    background: url(../img/H_img2.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.btn-sm{
+    padding: 3px 5px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8PX;
+    border-color: white;
+    margin: 6px 9px;
+}
+.burger{
+    position: absolute;
+    cursor: pointer;
+    right: 3%;
+    top: 0;
+    display: none;
+    margin-top: 18px;
+}
+.line{
+    background-color: white;
+    height: 4px;
+    width: 26px;
+    margin: 5px 4px;
+}
+.box-main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin: 4% 0% 0% 28%;
+    height: 80%;
+}
+.firstSection{
+    height: 100vh;
+}
+.background{
+    background: url(../img/sec_img.jpg) no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    /* background-attachment: scroll; */
+    background-position: center;
+    overflow: hidden;
+}
+.firstHalf{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondHalf img{
+    width: 59%;
+    border-radius: 50%;
+    border: 3px solid black;
+    display: block;
+    margin: auto;
+}
+.text-big{
+    font-size: 43px;
+    display: inline-block;
+    text-decoration: underline;
+    color: white;
+    font-style: inherit;
+    font-weight: bold;
+}
+.text-small{
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Kirang Haerang', cursive;
+    color: yellow;
+    font-style: inherit;
+}
+.btn1{
+    padding: 6px 5px;
+    margin: 7px 11px;
+    border-color: white;
+    border-radius: 22px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.btn1 a{
+    text-decoration: none;
+    color: white;
+}
+.sectionsubTag{
+    font-family: 'Kirang Haerang', cursive;
+    text-decoration: none;
+}
+.secRight{
+    height: 500px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 77%;;
+}
+.thumbnail img{
+    height: 210px;
+    width: 210px;
+    border: 2px solid black;
+    border-radius: 14%;
+    margin-top: 67px;
+}
+.thumbnail2 img{
+    height: 210px;
+    width: 210px;
+    border: 2px solid black;
+    border-radius: 14%;
+    margin: 96px 0px;
+}
+.secRight1{
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 77%;
+    margin: auto;
+}
+.sectionTag{
+    font-size: 43px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-style: inherit;
+    font-weight: bold;
+}
+.sectionsubTag{
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Kirang Haerang', cursive;
+    color: black;
+    font-style: inherit;
+}
+.paras{
+    padding: 0px 65px;
+}
+.sectionTag{
+    padding: 16px 0;
+}
+.contact{
+    background-color: rgb(252, 249, 249);
+}
+h1{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(151, 147, 147);
+    margin: 1% 45%;
+    
+}
+.Text-align{
+    width: 71%;
+    margin: 2% 14%;
+    border: 2px solid rgb(228, 225, 225);
+    padding: 8px 0px;
+    border: 2px solid rgb(228, 225, 225);
+}
+.Submitform{
+    margin: 3px 209px;
+    padding: 6px 12px;
+    color: gray;
+    border: gray;
+    border-radius: 14%;
+}
+.Submitform1{
+    margin: 3px -138px;
+    padding: 6px 12px;
+    color: gray;
+    border: gray;
+    border-radius: 14%;
+}
+.Footer{
+    padding: 29px 40%;
+    color: black;
+    background-color: rgb(236, 231, 231);
+    width: 20%;
+    font-size: 118%;
+    display: inline-block;
+    margin-top: 0%
+}

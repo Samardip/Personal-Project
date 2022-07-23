@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      margin: auto;
+      /*justify-content: space-evenly;*/
+    }
+    .square {
+      background-color: red;
+      height: 50px;
+      width: 50px;
+    }
+    .square1 {
+      margin-left: 10px;
+      background-color: blue;
+      height: 50px;
+      width: 50px;
+    }
+    .circle {
+      background-color: green;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+    .circle1 {
+      background-color: yellow;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+    .c{
+        background-color: aqua;
+        padding: 65px;
+    height: 62px;
+    width: 128px;
+    border-radius: 23px;
+    z-index: 2;
+    }
+    .c:hover{
+        height:181px;
+        transition: height 1s; 
+        /* //visibility:; */
+    }
+    .c:hover:h6{
+        visibility:inherit;
+    }
+    .img{
+        align-items: center;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    height: 0px;
+    z-index: 3;
+    }
+    .img-source{
+        
+    width: 188px;
+        height: 188px;
+        border-radius: 10px;
+    }
+    .center{
+        position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    }
+    h6{
+        color: black;
+        transform: translateY(244px);
+        margin-left: 50%;
+        z-index: 1;
+        /* visibility: hidden; */
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="square">
+        <div class="circle"></div>
+      </div>
+      <div class="square1">
+        <div class="circle1"></div>
+      </div>
+    </div>
+    <h6>sam</h6>
+    <div class="center">
+      <div class="c">
+          
+        <div class="img">
+            
+          <img src="img.jpg" class="img-source" alt="logo" />
+        </div>
+      </div>
+    </div>
+    <input list="b" class="inline-form" id="b2" autocomplete="on" />
+    <datalist id="b">
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </datalist>
+    <br>
+    <br><br><br><br><br>
+    <div id="result"></div>
+    <button id="btn">start</button>
+    <button id="btn1" >stop</button>
+    
+  </body>
+  <script>
+    let timeStamp;
+    let m=0;
+    document.getElementById('btn').addEventListener('click',()=>{
+        timeStamp=setInterval(()=>{
+            document.getElementById('result').innerHTML=m;
+            m++;
+        },1000)
+    });
+    document.getElementById('btn1').addEventListener('click',()=>{
+      clearInterval(timeStamp);
+    });
+    
+  </script>
+</html>

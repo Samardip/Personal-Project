@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-BOOK GRAND SALE</title>
+</head>
+<style>
+    body{
+        background-color:#e6e6fa;
+    }
+    #discounttable{
+        border-style:solid;
+        float:right;
+    }
+    h1{
+        color:#800080;
+        font-family:cursive;
+        text-align:center;
+    }
+    h2{
+        text-align:center;
+    }
+</style>
+<script>
+    function calculate()
+    {
+    var r=document.getElementsByName("bookCategory");
+    var r1;
+    for(var i=0;i<r.length;i++)
+    {
+       if(r[i].checked)
+         r1=r[i].value;
+
+    }
+    var c=document.getElementById("bookval").value;
+    c=parseInt(c);
+    var p;
+    if(r1 == "science")
+    {
+        if(c<=250)
+        {
+           p=(c*400)*95/100; 
+        }
+        else
+            p=(c*400)*93/100; 
+    }
+    else
+    {
+        if(c<=250)
+        {
+           p=(c*300)*97/100; 
+        }
+        else
+            p=(c*300)*96/100;    
+    }
+    document.getElementById("result").innerHTML = "Total Price is:" + p;
+}
+</script>
+<body>
+    <h1>E-BOOK GRAND SALE</h1>
+    <form onsubmit="calculate()" action="javascript:void(0)">
+        <table>
+            <tr>
+                <td>Customer Name</td>
+                <td><input type="text" placeholder="Enter the Customer Name" name="customerName" required ></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td><input type="tel" placeholder="Enter the Mobile Number" name="customerMobileNumber" required ></td>
+            </tr>
+            <tr>
+                <td>Book Category</td>
+                <td><input type="radio"  name="bookCategory" value="science" id="sci">Science</td>
+                <td><input type="radio"  name="bookCategory" value="commerce" id="com">Comics</td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>
+                    <input type="text" name="bookType" list="bookTypes" autocomplete="on">
+                        <datalist id="bookTypes" name="bookTypes">
+                            <option value="Weekly">Weekly</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Fortnightly">Fortnightly</option>
+                        </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>No of Books Required</td>
+                <td><input type="range" name="bookcount" id="bookval" min="1" max="500" value="1">
+                <output name="x"></output></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Calculate Total Price" name="submit"></td>
+                <td><input type="reset" value="Reset" name="Reset"></td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="result"></div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

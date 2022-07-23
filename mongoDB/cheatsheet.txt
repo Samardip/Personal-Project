@@ -1,0 +1,26 @@
+db.comments.insert({
+    'name':'Harry',
+    'lang':'Javascript',
+    'member_since': 5
+})
+db.comments.insertMany([{
+    'name':'Harry',
+    'lang':'Javascript',
+    'member_since': 5
+},
+{
+    'name':'Rohan',
+    'lang':'Python',
+    'member_since': 3
+},
+{
+    'name':'Lovish',
+    'lang':'Java',
+    'member_since': 4
+}])
+db.comments.update({'name':'Harry'}
+{
+    'name':'Harry',
+    'lang':'Javascript',
+    'member_since': 5
+})

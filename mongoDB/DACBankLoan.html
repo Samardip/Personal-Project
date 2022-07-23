@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAC BANK - AVAIL LOAN</title>
+</head>
+<style>
+    body{
+        background-color: #FFAACC;
+    }
+   h1{
+        text-align: center;
+        color:#770080;
+        font-family: cursive;
+
+    }
+    #result{
+        font-weight:bold;
+        color: #770080;
+        text-align: center;
+    }
+    table{
+        margin:10vh 25vh 0vh 33vh;
+    }
+</style>
+<script>
+    function func()
+    {
+        var name=document.getElementById("cname").value;
+        var la=document.getElementById("lA").value;
+         document.getElementById("result").innerHTML="Thank you "+ name +".Your Loan Amount is " + la;
+    }
+</script>
+<body>
+    <h1>DAC BANK - AVAIL LOAN</h1>
+    <form onsubmit="func()" action="javascript:void(0)">
+        <table >
+            <tr>
+                <td>
+                    Customer Name
+                </td>
+                <td>
+                    <input type="teext" name="customerName" id="cname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address
+                </td>
+                <td>
+                    <input type="text" row="5" column="20" name="customerAddress" id="caddress" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="male">Male
+                    <input type="radio" name="gender" id="female">Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email ID
+                </td>
+                <td>
+                    <input type="email" name="customerEmail" id="cemail" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mobile Number
+                </td>
+                <td>
+                    <input type="tel" name="customerMobileNumber" id="cmn" pattern="[789][0-9]{9}" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Date of Birth
+                </td>
+                <td>
+                    <input type="date" name="dob" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Loan Type
+                </td>
+                <td>
+                    <input type="text" name="loanType" list="loan" autocomplete="on">
+                    <datalist name="loanType" id="loan">
+                        <option value="Vehicle">Vehicle</option>
+                        <option value="Home">Home</option>
+                        <option value="Education">Education</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Loan Amount
+                </td>
+                <td>
+                    <input type="number" name="loanAmount" id="lA" placeholder="Enter the Amount" required> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Tenure
+                </td>
+                <td>
+                    <input type="number" name="loan Tenure" min="1" max="5" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Avail Loan" name="Submit">
+                </td>
+                <td>
+                    <input type="reset" value="reset" name="Reset">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
